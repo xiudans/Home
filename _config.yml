@@ -9,7 +9,7 @@
 title: "xiu中心"
 email: gusquinalha@gmail.com
 description: "Simple and flexible Jekyll theme for help center."
-baseurl: "/Home"
+baseurl: "/jekyll-help-center-theme"
 url: "http://quinalha.me"
 twitter_username: "gustavoquinalha"
 github_username:  "gustavoquinalha"
