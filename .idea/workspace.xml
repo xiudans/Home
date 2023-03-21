@@ -4,6 +4,9 @@
     <list default="true" id="5d5415b4-cd92-4f6e-a598-36e70123370f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2017-11-12-question-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-12-question-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/question-3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/question-3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +32,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,10 +55,13 @@
       <updated>1678936578082</updated>
       <workItem from="1678936586155" duration="143000" />
       <workItem from="1678972176374" duration="2205000" />
+<<<<<<< HEAD
       <workItem from="1679014066717" duration="589000" />
       <workItem from="1679063410384" duration="2623000" />
       <workItem from="1679294010722" duration="403000" />
       <workItem from="1679383534400" duration="1106000" />
+=======
+>>>>>>> parent of c5aa25a (null)
     </task>
     <servers />
   </component>
