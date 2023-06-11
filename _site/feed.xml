@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>xiu中心</title>
-    <description>Simple and flexible Jekyll theme for help center.</description>
+    <title>CCNA学習センター</title>
+    <description>This is a learning website for CCNA (Cisco Certified Network Associate).</description>
     <link>http://localhost:4000/Home/</link>
     <atom:link href="http://localhost:4000/Home/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Apr 2023 23:51:32 +0900</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2023 23:51:32 +0900</lastBuildDate>
+    <pubDate>Sun, 11 Jun 2023 17:00:11 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Jun 2023 17:00:11 +0900</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
-        <title>面试问题</title>
+        <title>EIGRP</title>
         <description>
 </description>
-        <pubDate>Mon, 27 Mar 2023 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/Home/question-3/</link>
-        <guid isPermaLink="true">http://localhost:4000/Home/question-3/</guid>
+        <pubDate>Sun, 11 Jun 2023 23:46:41 +0900</pubDate>
+        <link>http://localhost:4000/Home/question-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/Home/question-2/</guid>
         
         
         <category>start</category>
@@ -25,12 +25,12 @@
       </item>
     
       <item>
-        <title>小项目</title>
+        <title>面试问题</title>
         <description>
 </description>
-        <pubDate>Mon, 13 Nov 2017 05:46:41 +0900</pubDate>
-        <link>http://localhost:4000/Home/question-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/Home/question-2/</guid>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/Home/question-3/</link>
+        <guid isPermaLink="true">http://localhost:4000/Home/question-3/</guid>
         
         
         <category>start</category>

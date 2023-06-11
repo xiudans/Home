@@ -4,14 +4,21 @@
 
 .header {
   min-height: 200px;
-  background: url('../assets/img/pattern2.svg'), rgba($colortheme, .9);
+  //background: url('../assets/img/2111.w039.n003.7B.p1.7.jpg'), rgba($colortheme, .1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%), url('../assets/img/2111.w039.n003.7B.p1.7.jpg');
   background-size: 310px;
   width: 100%;
 
   .header--block {
     color: $colortext;
 
-    .header--block--text {}
+    .header--block--text {
+      color: #0081ff;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 36px;
+
+    }
 
     .header--block--input {
       display: flex;
@@ -21,7 +28,7 @@
       border-radius: 4px;
       overflow: hidden;
       width: 100%;
-      opacity: 0.5;
+      opacity: 0.9;
       transition: 0.3s;
 
       &:focus-within {
