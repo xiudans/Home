@@ -26,6 +26,5 @@ paginate: 5
 # Plugins
 plugins_dir:
   - jekyll-admin
-  - jekyll-last-modified-at
 future: true
 
