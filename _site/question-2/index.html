@@ -37,8 +37,12 @@
 </head>
 
 
+<head>
+    <link href="/Home/css/lightbox.min.css" rel="stylesheet" />
+
+</head>
 <body>
-  <div class="">
+<div class="">
     <div class="menu">
   <div class="size margin menu--content container align-items-center justify-content-between">
 
@@ -101,24 +105,111 @@
 
 
     <!-- posts -->
+
+<!--    <div class="margin-top-20 margin-bottom-50">-->
+<!--      -->
+<!--      <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">-->
+<!--        -->
+<!--        <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--          <img src="/Home/assets/img/Q2-01.png" width="100%" alt="">-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="flex-basis-400 flex-grow-5">-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <h2 class="list-post-title">-->
+<!--            EIGRPの概要-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <span class="list-post-description">-->
+<!--              EIGRPは、ディスタンスベクタ型のIGRPをベースとして、OSPFなどのリンクステート型の利点を組み合わせたハイブリッド型のルーティングプロトコルです。（拡張ディスタンスベクタ型ともよばれます） ディスタンスベクタ型をベースとしているため、経路情報はRIPやIGRPと同様に、自身が持つ最適経路のみを隣接ルータに通知します。 また、送信してきたルータをネクストホップとしますが、通知されてきた経路情報のうち最適経路のみを保持するのではなく、すべての経路情報を保持するところが、ディスタンスベクタ型とは異なります。 このすべての経路情報のことを「トポロジーテーブル（Topology Table）」といいます。-->
+<!--            </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">-->
+<!--        -->
+<!--        <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--          <img src="/Home/assets/img/Q2-02.png" width="100%" alt="">-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="flex-basis-400 flex-grow-5">-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <h2 class="list-post-title">-->
+<!--            EIGRPのテーブル-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <span class="list-post-description">-->
+<!--              EIGRPでは、トポロジーテーブルから最適経路を選択し、ルーティングテーブルにエントリするとともに、最適経路の代わりとなる代替経路を選びます。 代替経路は最適経路が使えなくなった場合に、直ちに新たな最適経路としてルーティングテーブルにエントリされます。 これにより、EIGRPは高速なコンバージェンスが行えるようになっています。 図のRT-Cでは、RT-Eからのアップデート（経路情報）を受け、ネットワークXの経路情報をトポロジーテーブルに記録します。　そこからルーティングテーブルにネクストホップをRT-Eとしてエントリします。 RT-Aは、RT-B、RT-Cからのアップデートを受け、トポロジーテーブルにネットワークX宛の2つの経路情報を記録しています。 その2つのうち、メトリックのよいRT-Cをネクストホップとした経路をルーティングテーブルにエントリします。 最適経路と代替経路の判別には、DUAL（Diffuse Update ALgolism：拡散アップデートアルゴリズム）と呼ばれる処理が行われます。 これにより、ディスタンスベクタ型の欠点であった、ルーティングループを防いでいます。-->
+<!--            </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">-->
+<!--        -->
+<!--        <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--          <img src="/Home/assets/img/Q2-03.png" width="100%" alt="">-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="flex-basis-400 flex-grow-5">-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <h2 class="list-post-title">-->
+<!--            複合メトリック-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <span class="list-post-description">-->
+<!--              EIGRPのメトリックは複合メトリックと呼ばれるメトリックです。　帯域幅、遅延、信頼性、負荷、MTUの5つの値から計算しますが、デフォルトでは帯域幅と遅延しか使用しません。 帯域幅は宛先ネットワークまでの経路上で最も小さい帯域幅が使われます。 遅延は経路上の遅延の累計値となります。 また、EIGRPではOSPF同様にメトリックが同じ経路を複数持つ場合に、等コストロードバランシングが可能です。 さらにメトリックが異なる経路での、不等コストロードバランシングも行えます。 不等コストロードバランシングは、最適経路のメトリックのn倍までのメトリックの経路を使い、負荷分散を行います。-->
+<!--            </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">-->
+<!--        -->
+<!--        <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--          <img src="/Home/assets/img/Q2-04.png" width="100%" alt="">-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="flex-basis-400 flex-grow-5">-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <h2 class="list-post-title">-->
+<!--            ネイバー関係の確立-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">-->
+<!--            <span class="list-post-description">-->
+<!--              EIGRPではOSPFと同様に、経路情報を交換する相手を決定してから、情報の交換を行います。ネイバーになるために、マルチキャスト（224.0.0.10：全EIGRPルータ宛）でHelloパケットのやり取りを行い、自動検出したEIGRPルータを自身のネイバーテーブルに保存します。ネイバーになった後は、Helloパケットを定期的にやり取りすることで、キープアライブを行います。Helloパケットは5秒間隔で送信され、EthernetにおいてはネイバールータからのHelloパケットが3倍の15秒（5秒×3）間確認できない場合は、ネイバールータはダウンしたと判断され、ネイバーテーブルから削除されます。また、ネットワークに変更があった場合は変更分のみをアップデートで通知します。ネイバーから入手した経路情報はトポロジーテーブルに記載されます。トポロジーテーブルから最適経路、代替経路を選出するには、DUALアルゴリズムが使用されます。-->
+<!--            </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--    </div>-->
+
     <div class="margin-top-20 margin-bottom-50">
       
       <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
         
         <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-          <img src="/Home/assets/img/Q2-01.png" width="100%" alt="">
+          <a href="/Home/assets/img/Q2-01.png" data-lightbox="image-gallery">
+            <img src="/Home/assets/img/Q2-01.png" width="100%" alt="">
+          </a>
         </div>
         
         <div class="flex-basis-400 flex-grow-5">
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
             <h2 class="list-post-title">
-            EIGRPの概要
+              EIGRPの概要
             </h2>
           </div>
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-            <span class="list-post-description">
-              EIGRPは、ディスタンスベクタ型のIGRPをベースとして、OSPFなどのリンクステート型の利点を組み合わせたハイブリッド型のルーティングプロトコルです。（拡張ディスタンスベクタ型ともよばれます） ディスタンスベクタ型をベースとしているため、経路情報はRIPやIGRPと同様に、自身が持つ最適経路のみを隣接ルータに通知します。 また、送信してきたルータをネクストホップとしますが、通知されてきた経路情報のうち最適経路のみを保持するのではなく、すべての経路情報を保持するところが、ディスタンスベクタ型とは異なります。 このすべての経路情報のことを「トポロジーテーブル（Topology Table）」といいます。
-            </span>
+        <span class="list-post-description">
+          EIGRPは、ディスタンスベクタ型のIGRPをベースとして、OSPFなどのリンクステート型の利点を組み合わせたハイブリッド型のルーティングプロトコルです。（拡張ディスタンスベクタ型ともよばれます） ディスタンスベクタ型をベースとしているため、経路情報はRIPやIGRPと同様に、自身が持つ最適経路のみを隣接ルータに通知します。 また、送信してきたルータをネクストホップとしますが、通知されてきた経路情報のうち最適経路のみを保持するのではなく、すべての経路情報を保持するところが、ディスタンスベクタ型とは異なります。 このすべての経路情報のことを「トポロジーテーブル（Topology Table）」といいます。
+        </span>
           </div>
         </div>
       </div>
@@ -126,19 +217,21 @@
       <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
         
         <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-          <img src="/Home/assets/img/Q2-02.png" width="100%" alt="">
+          <a href="/Home/assets/img/Q2-02.png" data-lightbox="image-gallery">
+            <img src="/Home/assets/img/Q2-02.png" width="100%" alt="">
+          </a>
         </div>
         
         <div class="flex-basis-400 flex-grow-5">
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
             <h2 class="list-post-title">
-            EIGRPのテーブル
+              EIGRPのテーブル
             </h2>
           </div>
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-            <span class="list-post-description">
-              EIGRPでは、トポロジーテーブルから最適経路を選択し、ルーティングテーブルにエントリするとともに、最適経路の代わりとなる代替経路を選びます。 代替経路は最適経路が使えなくなった場合に、直ちに新たな最適経路としてルーティングテーブルにエントリされます。 これにより、EIGRPは高速なコンバージェンスが行えるようになっています。 図のRT-Cでは、RT-Eからのアップデート（経路情報）を受け、ネットワークXの経路情報をトポロジーテーブルに記録します。　そこからルーティングテーブルにネクストホップをRT-Eとしてエントリします。 RT-Aは、RT-B、RT-Cからのアップデートを受け、トポロジーテーブルにネットワークX宛の2つの経路情報を記録しています。 その2つのうち、メトリックのよいRT-Cをネクストホップとした経路をルーティングテーブルにエントリします。 最適経路と代替経路の判別には、DUAL（Diffuse Update ALgolism：拡散アップデートアルゴリズム）と呼ばれる処理が行われます。 これにより、ディスタンスベクタ型の欠点であった、ルーティングループを防いでいます。
-            </span>
+        <span class="list-post-description">
+          EIGRPでは、トポロジーテーブルから最適経路を選択し、ルーティングテーブルにエントリするとともに、最適経路の代わりとなる代替経路を選びます。 代替経路は最適経路が使えなくなった場合に、直ちに新たな最適経路としてルーティングテーブルにエントリされます。 これにより、EIGRPは高速なコンバージェンスが行えるようになっています。 図のRT-Cでは、RT-Eからのアップデート（経路情報）を受け、ネットワークXの経路情報をトポロジーテーブルに記録します。　そこからルーティングテーブルにネクストホップをRT-Eとしてエントリします。 RT-Aは、RT-B、RT-Cからのアップデートを受け、トポロジーテーブルにネットワークX宛の2つの経路情報を記録しています。 その2つのうち、メトリックのよいRT-Cをネクストホップとした経路をルーティングテーブルにエントリします。 最適経路と代替経路の判別には、DUAL（Diffuse Update ALgolism：拡散アップデートアルゴリズム）と呼ばれる処理が行われます。 これにより、ディスタンスベクタ型の欠点であった、ルーティングループを防いでいます。
+        </span>
           </div>
         </div>
       </div>
@@ -146,19 +239,21 @@
       <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
         
         <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-          <img src="/Home/assets/img/Q2-03.png" width="100%" alt="">
+          <a href="/Home/assets/img/Q2-03.png" data-lightbox="image-gallery">
+            <img src="/Home/assets/img/Q2-03.png" width="100%" alt="">
+          </a>
         </div>
         
         <div class="flex-basis-400 flex-grow-5">
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
             <h2 class="list-post-title">
-            複合メトリック
+              複合メトリック
             </h2>
           </div>
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-            <span class="list-post-description">
-              EIGRPのメトリックは複合メトリックと呼ばれるメトリックです。　帯域幅、遅延、信頼性、負荷、MTUの5つの値から計算しますが、デフォルトでは帯域幅と遅延しか使用しません。 帯域幅は宛先ネットワークまでの経路上で最も小さい帯域幅が使われます。 遅延は経路上の遅延の累計値となります。 また、EIGRPではOSPF同様にメトリックが同じ経路を複数持つ場合に、等コストロードバランシングが可能です。 さらにメトリックが異なる経路での、不等コストロードバランシングも行えます。 不等コストロードバランシングは、最適経路のメトリックのn倍までのメトリックの経路を使い、負荷分散を行います。
-            </span>
+        <span class="list-post-description">
+          EIGRPのメトリックは複合メトリックと呼ばれるメトリックです。　帯域幅、遅延、信頼性、負荷、MTUの5つの値から計算しますが、デフォルトでは帯域幅と遅延しか使用しません。 帯域幅は宛先ネットワークまでの経路上で最も小さい帯域幅が使われます。 遅延は経路上の遅延の累計値となります。 また、EIGRPではOSPF同様にメトリックが同じ経路を複数持つ場合に、等コストロードバランシングが可能です。 さらにメトリックが異なる経路での、不等コストロードバランシングも行えます。 不等コストロードバランシングは、最適経路のメトリックのn倍までのメトリックの経路を使い、負荷分散を行います。
+        </span>
           </div>
         </div>
       </div>
@@ -166,24 +261,29 @@
       <div class="list-item-2 container wrap-reverse align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
         
         <div class="list-item-2-img flex-basis-300 flex-grow-1" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-          <img src="/Home/assets/img/Q2-04.png" width="100%" alt="">
+          <a href="/Home/assets/img/Q2-04.png" data-lightbox="image-gallery">
+            <img src="/Home/assets/img/Q2-04.png" width="100%" alt="">
+          </a>
         </div>
         
         <div class="flex-basis-400 flex-grow-5">
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
             <h2 class="list-post-title">
-            ネイバー関係の確立
+              ネイバー関係の確立
             </h2>
           </div>
           <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-            <span class="list-post-description">
-              EIGRPではOSPFと同様に、経路情報を交換する相手を決定してから、情報の交換を行います。ネイバーになるために、マルチキャスト（224.0.0.10：全EIGRPルータ宛）でHelloパケットのやり取りを行い、自動検出したEIGRPルータを自身のネイバーテーブルに保存します。ネイバーになった後は、Helloパケットを定期的にやり取りすることで、キープアライブを行います。Helloパケットは5秒間隔で送信され、EthernetにおいてはネイバールータからのHelloパケットが3倍の15秒（5秒×3）間確認できない場合は、ネイバールータはダウンしたと判断され、ネイバーテーブルから削除されます。また、ネットワークに変更があった場合は変更分のみをアップデートで通知します。ネイバーから入手した経路情報はトポロジーテーブルに記載されます。トポロジーテーブルから最適経路、代替経路を選出するには、DUALアルゴリズムが使用されます。
-            </span>
+        <span class="list-post-description">
+          EIGRPではOSPFと同様に、経路情報を交換する相手を決定してから、情報の交換を行います。ネイバーになるために、マルチキャスト（224.0.0.10：全EIGRPルータ宛）でHelloパケットのやり取りを行い、自動検出したEIGRPルータを自身のネイバーテーブルに保存します。ネイバーになった後は、Helloパケットを定期的にやり取りすることで、キープアライブを行います。Helloパケットは5秒間隔で送信され、EthernetにおいてはネイバールータからのHelloパケットが3倍の15秒（5秒×3）間確認できない場合は、ネイバールータはダウンしたと判断され、ネイバーテーブルから削除されます。また、ネットワークに変更があった場合は変更分のみをアップデートで通知します。ネイバーから入手した経路情報はトポロジーテーブルに記載されます。トポロジーテーブルから最適経路、代替経路を選出するには、DUALアルゴリズムが使用されます。
+        </span>
           </div>
         </div>
       </div>
       
     </div>
+
+
+
     <!-- posts -->
 
     <!-- content -->
@@ -211,6 +311,10 @@
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="/Home/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/Home/assets/js/lightbox-plus-jquery.min.js"></script>
+
+
+
   
   <script>
     AOS.init({
@@ -223,6 +327,8 @@
       json: '/Home/search.json'
     })
   </script>
+
+
 </body>
 
 </html>

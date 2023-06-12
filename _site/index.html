@@ -37,8 +37,12 @@
 </head>
 
 
+<head>
+    <link href="/Home/css/lightbox.min.css" rel="stylesheet" />
+
+</head>
 <body>
-  <div class="">
+<div class="">
     <div class="menu">
   <div class="size margin menu--content container align-items-center justify-content-between">
 
@@ -95,10 +99,35 @@
   
   
   
+  <a href="/Home/question-3/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+
+    <div class="list-item-icon container align-items-center justify-content-center">
+      <span class="feather-icon icon-bar-chart" data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"></span>
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+        <h2 class="list-post-title">
+        ネットワーク技術
+        </h2>
+      </div>
+
+      <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+        <span class="list-post-description">IPアドレス編.</span>
+      </div>
+
+      <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+        <small>Written by <span>Xiu</span>-</small>
+        <small><time>12 Jun 2023</time></small>
+      </div>
+    </div>
+
+  </a>
+  
   <a href="/Home/question-2/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
 
     <div class="list-item-icon container align-items-center justify-content-center">
-      <span class="feather-icon icon-loader" data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"></span>
+      <span class="feather-icon icon-aperture" data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"></span>
     </div>
 
     <div class="flex-grow-1">
@@ -115,31 +144,6 @@
       <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
         <small>Written by <span>Xiu</span>-</small>
         <small><time>11 Jun 2023</time></small>
-      </div>
-    </div>
-
-  </a>
-  
-  <a href="/Home/question-3/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
-
-    <div class="list-item-icon container align-items-center justify-content-center">
-      <span class="feather-icon icon-help-circle" data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"></span>
-    </div>
-
-    <div class="flex-grow-1">
-      <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
-        <h2 class="list-post-title">
-        面试问题
-        </h2>
-      </div>
-
-      <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-        <span class="list-post-description">温故而知新.</span>
-      </div>
-
-      <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-        <small>Written by <span>Xiu</span>-</small>
-        <small><time>27 Mar 2023</time></small>
       </div>
     </div>
 
@@ -192,6 +196,10 @@
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="/Home/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/Home/assets/js/lightbox-plus-jquery.min.js"></script>
+
+
+
   
   <script>
     AOS.init({
@@ -204,6 +212,8 @@
       json: '/Home/search.json'
     })
   </script>
+
+
 </body>
 
 </html>

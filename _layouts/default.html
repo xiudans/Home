@@ -1,7 +1,11 @@
 {% include head.html %}
 
+<head>
+    <link href="{{ site.baseurl }}/css/lightbox.min.css" rel="stylesheet" />
+
+</head>
 <body>
-  <div class="">
+<div class="">
     {% include menu.html %}
 
     {{ content }}
@@ -10,6 +14,10 @@
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/lightbox-plus-jquery.min.js"></script>
+
+
+
   
   <script>
     AOS.init({
@@ -22,6 +30,8 @@
       json: '{{ site.baseurl }}/search.json'
     })
   </script>
+
+
 </body>
 
 </html>
