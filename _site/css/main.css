@@ -90,7 +90,7 @@ img {
 }
 
 .menu {
-  background: #0081ff;
+  background: #FF7F24;
   position: sticky;
   top: 0;
   left: 0;
@@ -142,7 +142,7 @@ img {
   color: #fff;
 }
 .header .header--block .header--block--text {
-  color: #0081ff;
+  color: #FF7F24;
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 36px;
@@ -213,7 +213,7 @@ img {
   border-top: 1px solid #ddd;
 }
 .header--block--result ul li a:hover {
-  color: #0081ff;
+  color: #FF7F24;
 }
 
 .footer {
@@ -222,7 +222,7 @@ img {
   overflow: hidden;
 }
 .footer .footer--block a {
-  color: #0081ff;
+  color: #FF7F24;
 }
 .footer .footer--block a span {
   font-weight: bold;
@@ -1232,18 +1232,18 @@ img {
   margin-bottom: 0px;
 }
 .list-item:hover {
-  border-color: #0081ff;
+  border-color: #FF7F24;
 }
 .list-item .list-item-icon {
   flex-basis: 100px;
   padding-right: 20px;
   font-size: 2rem;
-  color: #0081ff;
+  color: #FF7F24;
 }
 .list-item .list-post-title {
   font-size: 22px;
   transition: 0.3s;
-  color: #0081ff;
+  color: #FF7F24;
 }
 .list-item .list-post-description {
   font-size: 16px;
@@ -1266,10 +1266,10 @@ img {
   overflow: hidden;
 }
 .list-item-2:hover {
-  border-color: #0081ff;
+  border-color: #FF7F24;
 }
 .list-item-2:hover .list-post-title {
-  color: #0081ff;
+  color: #FF7F24;
 }
 .list-item-2 .list-item-2-img {
   margin-right: 20px;

@@ -1,12 +1,24 @@
 [
   
     {
+      "title"       : "OSPF",
+      "description" : "CCNA資格対策",
+      "date"        : "2023-07-15 05:46:41 +0900",
+      "categories"  : "start and blog",
+      "by"          : "Ken",
+      "url"         : "/Home/posts/OSPF/",
+      "icon"        : "credit-card",
+      "questions"   : [{"question":"OSPFとは","answer":"<p>1. リンクステート方式を採用各ルータがリンク情報のデータベースを作成し、そのデータベースを基に宛先への最短経路を計算する方式です。</p> <p>2. クラスレスルーティングプロトコルを使用 アップデート内にサブネットマスク情報を含むルーティングを行います。 そのため、複雑なサブネット環境にも対応しています。</p> <p>3. ルータ検出にマルチキャストを使用 ブロードキャストを使用しないため、OSPFを有効にしていないルータに負担をかけません。</p> <p>4. トリガーアップデート 障害発生、ネットワークの追加等のイベント発生時にのみアップデートを行います。</p> <p>5. エリアの概念を採用 これによりネットワークを論理的に分割し、ルータにかかる負担を軽くすることができます。</p> <p>6. 最大ホップ数の制限がない RIPの場合、経由できるルータの数（ホップ数）が15までと制限があり、16以上経由するものに関しては到達不可となってしまいますが、OSPFにはそのような制限がありません。</p> <p>7. コスト値を用いて最適経路を算出する 後述のメトリックで説明します。</p> <p>8. LSAの交換によって情報交換を行う RIPでは経路情報そのものを交換しますが、OSPFではLSAと呼ばれるリンクステート情報を交換します。</p>"},{"question":"負荷分散","answer":"同一宛先ネットワークまでのメトリックが同じ複数の経路があった場合、複数の経路を使用してデータを転送することができます。","image":"Q1-01.png"}]
+
+    } ,
+  
+    {
       "title"       : "ネットワーク技術",
       "description" : "IPアドレス編.",
-      "date"        : "2023-06-12 00:00:00 +0900",
+      "date"        : "2023-07-14 00:00:00 +0900",
       "categories"  : "start and blog",
       "by"          : "Xiu",
-      "url"         : "/Home/question-3/",
+      "url"         : "/Home/posts/network/",
       "icon"        : "bar-chart",
       "questions"   : [{"question":"IPアドレス","answer":"IPアドレス（Internet Protocol address）とは、ネットワーク上の機器を識別するための番号のことです。 現実世界でも、郵便物を目的地に届けるためには宛先となる住所が必要なように、コンピュータの世界でもデータを目的地に届けるためには宛先となるIPアドレス（住所）が必要です。 IPアドレスは『192.168.1.1』のような0～255の数字を『 . 』（ドット）で区切り、4つ並べて表現します。 ※画像はWindowsのコマンドプロンプトでipconfigコマンドを使い、IPアドレスを確認した例 ipconfig_IPアドレス 画面で確認すると、『192.168.1.1』のように、人間が普段使っている10進数での表記となりますが、実際はコンピュータで扱うデータはすべて『0』と『1』で表現される2進数であり、IPアドレスも例外ではありません。 つまり、IPアドレスは10進数で確認できますが、内部的には2進数で処理されています。 IPアドレスを2進数で表記すると32bit（32桁）で以下のように表現されます。 10進数 ：192.168.1.1 2進数 ：11000000.10101000.00000001.00000001 IPアドレスは8bitごと『 . 』（ドット）で区切られた単位をオクテットと呼び、左から順に第一オクテット、第二オクテットと呼び、第四オクテットまで続きます。","image":"Q3-01.png"},{"question":"ネットワーク部・ホスト部","answer":"IPアドレスは前半部分がネットワーク部、後半部分はホスト部と呼ばれ、それぞれ役割が異なっています。 ネットワーク部とはひとつのコンピュータネットワークを識別するための値であり、ホスト部はひとつのコンピュータネットワークの中で個を識別するための値です。 ネットワーク部 ：同じネットワーク内にあるコンピュータはネットワーク部が同じ数値 ホスト部 ：同じネットワーク内にあるコンピュータはホスト部が異なる数値 私たちの住所とIPアドレスを比較してみるとわかりやすいでしょう。 ","image":"Q3-02.png"},{"question":"サブネットマスク","answer":"IPアドレスだけをみても、どこまでがネットワーク部で、どこからがホスト部なのかわかりません。 そこで、一般的にネットワーク部とホスト部の境目を示すための数字として『サブネットマスク』がIPアドレスとセットで表記されます。 ※画像はWindowsのコマンドプロンプトでipconfigコマンドを使い、サブネットマスクを確認した例 ipconfig_サブネットマスク サブネットマスクはIPアドレスと同じ32bitの2進数で構成され、表現方法も8bitずつ『 . 』（ドット）で区切り、ネットワーク部をビット『1』、ホスト部をビット『0』で表現します。","image":"Q3-03.png"},{"question":"プレフィックスレングス","answer":"サブネットマスクがネットワーク部とホスト部の境目を示す。とお伝えしましたが、 同じ役割を持つ、プレフィックスレングスというものもあります。 192.168.1.1 /24 IPアドレスの後ろにある『/24』がプレフィックスレングスです。ネットワーク部が24bitであるということを示しています。IPアドレスは32bitであるため、残り8bitがホスト部であることがわかります。 このようにIPアドレスとセットで表記される点もサブネットマスクと共通しています。 コンピュータにネットワーク部とホスト部の情報を入力するときはサブネットマスクで入力することが大半ですが、情報を確認する場合の出力としては、プレフィックスレングスの形式で表現されることも少なくありません。 ※画像はCiscoルータでshow interfaceコマンドを使い、IPアドレス、プレフィックスレングスを確認した様子。","image":"Q3-04.png"},{"question":"グローバルアドレスとプライベートアドレス","answer":"IPアドレスは32bitの2進数、つまり桁数の決まった数字なので、表現できる番号の数にも限りがあります。具体的には、全部で232(42億9496万7296)個までしか用意することができないため、一人あたりひとつのIPアドレスを付与しようとすると足りなくなってしまいます。そのためIPアドレスは個人が勝手に利用できるものではなく、『ICANN』と呼ばれる非営利法人が世界的に管理しています。約43億個あるIPアドレスのうち、インターネットで使用可能なアドレスの事をグローバルアドレスと呼びます。日本では『JPNIC』とよばれる組織が、日本におけるグローバルアドレスを管理しており、そこから通信事業者である『ISP』（インターネットサービスプロバイダ）に割り当てられ、利用者はISPと契約することで利用できるようになります。この点は電話番号と似ています。また、グローバルアドレスは限りがありますので、節約するためにプライベートアドレスが利用されています。プライベートアドレスとは、インターネットでの通信に利用できないIPアドレスのことです。社内や家庭内などのLAN（ローカルエリアネットワーク）内での通信で利用されており、インターネットと通信する際はNAT（ネットワークアドレス変換）という技術を用いて、グローバルアドレスに変換して接続します。プライベートアドレスは以下の範囲内で利用することができます。","image":"Q3-05.png"}]
 
@@ -15,24 +27,12 @@
     {
       "title"       : "EIGRP",
       "description" : "Enhanced Interior Gateway Routing Protocol",
-      "date"        : "2023-06-11 23:46:41 +0900",
+      "date"        : "2023-06-11 00:00:00 +0900",
       "categories"  : "start and blog",
       "by"          : "Xiu",
-      "url"         : "/Home/question-2/",
+      "url"         : "/Home/posts/eigrp/",
       "icon"        : "aperture",
       "questions"   : [{"question":"EIGRPの概要","answer":"EIGRPは、ディスタンスベクタ型のIGRPをベースとして、OSPFなどのリンクステート型の利点を組み合わせたハイブリッド型のルーティングプロトコルです。（拡張ディスタンスベクタ型ともよばれます） ディスタンスベクタ型をベースとしているため、経路情報はRIPやIGRPと同様に、自身が持つ最適経路のみを隣接ルータに通知します。 また、送信してきたルータをネクストホップとしますが、通知されてきた経路情報のうち最適経路のみを保持するのではなく、すべての経路情報を保持するところが、ディスタンスベクタ型とは異なります。 このすべての経路情報のことを「トポロジーテーブル（Topology Table）」といいます。","image":"Q2-01.png"},{"question":"EIGRPのテーブル","answer":"EIGRPでは、トポロジーテーブルから最適経路を選択し、ルーティングテーブルにエントリするとともに、最適経路の代わりとなる代替経路を選びます。 代替経路は最適経路が使えなくなった場合に、直ちに新たな最適経路としてルーティングテーブルにエントリされます。 これにより、EIGRPは高速なコンバージェンスが行えるようになっています。 図のRT-Cでは、RT-Eからのアップデート（経路情報）を受け、ネットワークXの経路情報をトポロジーテーブルに記録します。　そこからルーティングテーブルにネクストホップをRT-Eとしてエントリします。 RT-Aは、RT-B、RT-Cからのアップデートを受け、トポロジーテーブルにネットワークX宛の2つの経路情報を記録しています。 その2つのうち、メトリックのよいRT-Cをネクストホップとした経路をルーティングテーブルにエントリします。 最適経路と代替経路の判別には、DUAL（Diffuse Update ALgolism：拡散アップデートアルゴリズム）と呼ばれる処理が行われます。 これにより、ディスタンスベクタ型の欠点であった、ルーティングループを防いでいます。","image":"Q2-02.png"},{"question":"複合メトリック","answer":"EIGRPのメトリックは複合メトリックと呼ばれるメトリックです。　帯域幅、遅延、信頼性、負荷、MTUの5つの値から計算しますが、デフォルトでは帯域幅と遅延しか使用しません。 帯域幅は宛先ネットワークまでの経路上で最も小さい帯域幅が使われます。 遅延は経路上の遅延の累計値となります。 また、EIGRPではOSPF同様にメトリックが同じ経路を複数持つ場合に、等コストロードバランシングが可能です。 さらにメトリックが異なる経路での、不等コストロードバランシングも行えます。 不等コストロードバランシングは、最適経路のメトリックのn倍までのメトリックの経路を使い、負荷分散を行います。","image":"Q2-03.png"},{"question":"ネイバー関係の確立","answer":"EIGRPではOSPFと同様に、経路情報を交換する相手を決定してから、情報の交換を行います。ネイバーになるために、マルチキャスト（224.0.0.10：全EIGRPルータ宛）でHelloパケットのやり取りを行い、自動検出したEIGRPルータを自身のネイバーテーブルに保存します。ネイバーになった後は、Helloパケットを定期的にやり取りすることで、キープアライブを行います。Helloパケットは5秒間隔で送信され、EthernetにおいてはネイバールータからのHelloパケットが3倍の15秒（5秒×3）間確認できない場合は、ネイバールータはダウンしたと判断され、ネイバーテーブルから削除されます。また、ネットワークに変更があった場合は変更分のみをアップデートで通知します。ネイバーから入手した経路情報はトポロジーテーブルに記載されます。トポロジーテーブルから最適経路、代替経路を選出するには、DUALアルゴリズムが使用されます。","image":"Q2-04.png"}]
-
-    } ,
-  
-    {
-      "title"       : "First category",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "date"        : "2017-11-13 05:46:41 +0900",
-      "categories"  : "start and blog",
-      "by"          : "Gustavo Quinalha",
-      "url"         : "/Home/question-1/",
-      "icon"        : "credit-card",
-      "questions"   : [{"question":"Question 1","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":"1.gif"},{"question":"Question 2","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":"2.gif"},{"question":"Question 3","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":"3.gif"},{"question":"Question 4","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":"4.gif"}]
 
     } 
   
